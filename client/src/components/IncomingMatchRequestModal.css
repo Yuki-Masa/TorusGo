@@ -1,0 +1,133 @@
+/* client/src/components/IncomingMatchRequestModal.css */
+
+/* モーダルの背景 */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 他の要素より手前に表示 */
+}
+
+/* モーダルのコンテンツボックス */
+.modal-content {
+    /* ★変更箇所: 色をMatchRequestModalとLobbyScreenのテーマに合わせる */
+    background-color: #3a3f4a; /* LobbyScreen.cssの.modal-contentに合わせる */
+    color: #f8f8f2; /* LobbyScreen.cssの.modal-contentに合わせる */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px; /* MatchRequestModal と同様に最大幅を設定 */
+    text-align: center;
+    position: relative; /* 閉じるボタンの配置用 */
+
+    /* ★変更箇所: モーダルコンテンツが画面からはみ出さないようにスクロール可能にする */
+    max-height: 80vh; /* ビューポートの高さの80%を最大高さとする */
+    overflow-y: auto; /* 垂直方向にはみ出た場合にスクロールバーを表示 */
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    /* ★変更箇所: H3の色をLobbyScreenのテーマに合わせる */
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    /* ★変更箇所: 段落の色をLobbyScreenのテーマに合わせる */
+    color: #f8f8f2;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* フォームグループ（ラベルと入力要素のまとまり） */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* ラベルとセレクトボックスを左寄せ */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    /* ★変更箇所: ラベルの色をMatchRequestModalに合わせる */
+    color: #f8f8f2;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    /* ★変更箇所: セレクトボックスの色をMatchRequestModalに合わせる */
+    border: 1px solid #555;
+    background-color: #444;
+    color: #f8f8f2;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+    appearance: none; /* デフォルトのスタイルを無効化 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* モーダル内のアクションボタン */
+.modal-actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center; /* ボタンを中央に配置 */
+    gap: 15px; /* ボタン間のスペース */
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    min-width: 100px; /* ボタンの最小幅を統一 */
+}
+
+/* 拒否ボタンのスタイル (MatchRequestModalのキャンセルボタンに合わせる) */
+.deny-button {
+    /* ★変更箇所: deny-buttonの色をMatchRequestModalのcancel-buttonに合わせる */
+    background-color: #888;
+    color: white;
+}
+
+.deny-button:hover {
+    background-color: #666;
+}
+
+/* 承諾ボタンのスタイル (MatchRequestModalのSubmitボタンに合わせる) */
+.accept-button {
+    /* ★変更箇所: accept-buttonの色をMatchRequestModalのsubmit-buttonに合わせる */
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+.accept-button:hover {
+    background-color: #4dc2ea; /* 濃い目の青 */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .modal-actions {
+        flex-direction: column; /* 小さい画面では縦に並べる */
+        gap: 10px;
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
+}

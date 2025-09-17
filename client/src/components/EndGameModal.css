@@ -1,0 +1,36 @@
+/* client/src/components/EndGameModal.css */
+/* Inherits from LobbyScreen.css for .modal-overlay, .modal-content, .modal-actions */
+
+.modal-message {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.modal-message br {
+    display: block; /* 改行を有効にする */
+    margin-bottom: 5px; /* 行間の調整 */
+}
+
+.modal-actions {
+    justify-content: space-around; /* ボタンを広めに配置 */
+}
+
+.modal-actions .confirm-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.modal-actions .confirm-button:hover {
+    background-color: #45a049;
+}
+
+.modal-actions .cancel-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-actions .cancel-button:hover {
+    background-color: #da190b;
+}

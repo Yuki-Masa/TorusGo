@@ -1,0 +1,87 @@
+/* client/src/pages/InitialScreen.css */
+.initial-screen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #282c34;
+    color: #f8f8f2;
+}
+
+.initial-screen-box {
+    background-color: #3a3f4a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.initial-screen-box h2 {
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #f8f8f2;
+    font-size: 1em;
+}
+
+.message {
+    color: #ff6b6b;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.primary-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.toggle-mode {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.secondary-button, .guest-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+.secondary-button:hover {
+    background-color: #45a049;
+}
+
+.guest-button {
+    background-color: #f44336; /* Red */
+}
+
+.guest-button:hover {
+    background-color: #da190b;
+}

@@ -1,0 +1,16 @@
+/* client/src/components/GoBoardComponent.css */
+.go-board-canvas {
+    background-color: #D4A87C; /* 碁盤の色 */
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    touch-action: none; /* モバイルでのスクロールと競合しないように */
+}
+
+.go-board-canvas.clickable {
+    cursor: pointer;
+}
+
+.go-board-canvas.my-turn {
+    box-shadow: 0 0 15px rgba(97, 218, 251, 0.7); /* 自分のターンで光らせる */
+}
